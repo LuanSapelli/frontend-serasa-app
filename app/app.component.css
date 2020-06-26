@@ -1,0 +1,29 @@
+.navbar {
+  background-color:rebeccapurple;
+  overflow: hidden;
+  bottom: 0;
+  width: 100%;
+  position: static;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-weight: bold;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  /* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #f2f2f2;
+    color: black;
+    border-radius: 25px;
+    
+  }

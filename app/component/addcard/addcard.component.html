@@ -1,0 +1,52 @@
+<div class="card offer">
+
+    <section class="offer__tags">
+      <span class="tag">Adicionar cartão</span>
+      <br><br>
+    </section>
+
+
+  <div class="card add-card">
+    <div class="card-body">
+        <form id="add-form" (ngSubmit)="f.form.valid && postCard(f)" #f="ngForm" novalidate>
+          <div class="form-group">
+              <label for="person_cpf">CPF</label>
+              <input type="text" [(ngModel)]="card.person_cpf" id="person_cpf" name="model" #person_cpf="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && person_cpf.invalid }" placeholder="Informe o seu CPF">
+              <div *ngIf="f.submitted && person_cpf.invalid" class="invalid-feedback">
+                  <div *ngIf="person_cpf.errors.required">CPF é obrigatório</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="card_number">Número do cartão</label>
+              <input type="text" [(ngModel)]="card.card_number" id="card_number" name="model" #card_number="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && card_number.invalid }" placeholder="Informe o número">
+              <div *ngIf="f.submitted && card_number.invalid" class="invalid-feedback">
+                  <div *ngIf="card_number.errors.required">Número do cartão é obrigatório</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="card_company">Bandeira do cartão</label>
+              <input type="text" [(ngModel)]="card.card_company" id="card_company" name="model" #card_company="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && card_company.invalid }" placeholder="Informe a bandeira">
+              <div *ngIf="f.submitted && card_company.invalid" class="invalid-feedback">
+                  <div *ngIf="card_company.errors.required">Bandeira é obrigatória</div>
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="limit">Limite</label>
+            <input type="text" [(ngModel)]="card.limit" id="limit" name="model" #limit="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && limit.invalid }" placeholder="Limite atual">
+            <div *ngIf="f.submitted && limit.invalid" class="invalid-feedback">
+                <div *ngIf="limit.errors.required">Limite é obrigatório</div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="card_statement">Fatura</label>
+          <input type="text" [(ngModel)]="card.card_statement" id="card_statement" name="model" #card_statement="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && card_statement.invalid }" placeholder="Fatura atual">
+          <div *ngIf="f.submitted && card_statement.invalid" class="invalid-feedback">
+              <div *ngIf="card_statement.errors.required">Fatura é obrigatória</div>
+          </div>
+      </div>
+        </form>
+    </div>
+    <button type="submit" class="add" (click)="postCard(f)">Salvar</button>
+    <button type="reset" class="delete" (click)="cleanForm(f)">Cancelar</button>
+  </div>
+</div>

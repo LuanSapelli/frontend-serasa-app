@@ -1,0 +1,30 @@
+
+
+<router-outlet></router-outlet>
+
+<div class="card offer">
+
+      <section class="offer__tags">
+        <span class="tag">Minhas dívidas</span>
+        <br><br>
+      </section>
+
+      <div class="card-btn">
+        <a class="add" routerLink="/adddebt" routerLinkActive="active">Adicionar Dívidas</a>
+      </div>
+
+      <div class="debts">
+        <tr *ngFor="let debt of debts">
+            <br><br>
+            <dt scope="col">Número do Contrato</dt>
+              <dd>{{debt.id}}</dd>
+              <dt scope="col">Credor</dt>
+              <dd>{{debt.company}}</dd>
+              <dt scope="col">Valor</dt>
+              <dd>R${{debt.value}}</dd>
+              <dt scope="col">Vencimento</dt>
+              <dd>{{debt.expiration}}</dd>
+          <button type="button" class="delete" (click)="deleteDebt(debt)">Remover Dívida</button>
+        </tr>
+    </div>
+

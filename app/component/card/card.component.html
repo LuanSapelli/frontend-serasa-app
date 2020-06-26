@@ -1,0 +1,33 @@
+
+<router-outlet></router-outlet>
+
+<div class="card offer">
+
+      <section class="offer__tags">
+        <span class="tag">Meus cartões</span>
+        <br><br>
+      </section>
+
+      <div class="card-btn">
+        <a class="add" routerLink="/addcard" routerLinkActive="active">Adicionar Cartões</a>
+    </div>
+
+        <div class="debts">
+            <tr *ngFor="let card of cards">
+                <br><br>
+                <dt scope="col">ID do Cartão</dt>
+              <dd>{{card.id}}</dd>
+              <dt scope="col">Número do Cartão</dt>
+              <dd>{{card.card_number}}</dd>
+              <dt scope="col">Bandeira</dt>
+              <dd>{{card.card_company}}</dd>
+              <dt scope="col">Limíte</dt>
+              <dd>R${{card.limit}}</dd>
+              <dt scope="col">Fatura Atual</dt>
+              <dd>R${{card.card_statement}}</dd>
+              <button type="button" class="delete" (click)="deleteCard(card)" >Remover Cartão</button>
+            </tr>
+        </div>
+
+        </div>
+

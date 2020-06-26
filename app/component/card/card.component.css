@@ -1,0 +1,81 @@
+.tag {
+    margin-top: 20px;
+    display: inline-block;
+    border: 1rem;
+    border-radius: 1rem;
+    color: #f2f2f2;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 16px;
+    font-size: 16px;
+    background-color: rebeccapurple;
+    font-weight: bold;
+  }
+
+
+.card-btn{
+    display: block;
+    margin-top: 20px;
+    margin: auto;
+    align-self: center;
+    display: inline-block;
+    
+}
+
+
+  .add {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-self: center;
+    display: inline-block;
+    background-color: #4CAF50; /* Green */
+    border: 1rem;
+    border-radius: 1rem;
+    color: #f2f2f2;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    line-height: 16px;
+    font-size: 16px;
+
+  }
+
+
+  .delete {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-self: center;
+    display: inline-block;
+    background-color: #B92E20; /* Green */
+    border: 1rem;
+    border-radius: 1rem;
+    color: #f2f2f2;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 16px;
+    margin: 10px;
+    font-size: 16px;
+  }
+
+
+.card {
+    padding: 1rem;
+    align-items: center;
+  }
+  
+
+th {
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+}
+
+
